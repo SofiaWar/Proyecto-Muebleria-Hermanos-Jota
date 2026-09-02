@@ -3,24 +3,53 @@ console.log("Hermanos Jota - JavaScript funcionando");
 const productos = [
     {
         id: 1,
-        nombre: "Mesa de comedor Roble Jota",
-        descripcion: "Mesa de seis cubiertos en roble macizo, con veta marcada y terminación aceite natural. Pensada para reuniones largas y uso diario."
+        nombre: "Mesa de comedor Pampa",
+        precio: 450000,
+        descripcion: "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
+        imagen: "img/Mesa Comedor Pampa.png"
     },
+
     {
         id: 2,
-        nombre: "Sillón Capri",
-        descripcion: "Sillón de lectura con estructura de petiribí, tapizado en lino y asiento profundo. Un clásico de nuestro catálogo desde los años noventa."
+        nombre: "Sillón Copacabana",
+        precio: 280000,
+        descripcion: "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
+        imagen: "img/Sillón Copacabana.png"
     },
+
     {
         id: 3,
-        nombre: "Biblioteca Atelier",
-        descripcion: "Biblioteca modular en guatambú, con estantes ajustables y fondo cerrado. Ideal para estudios y living de líneas sobrias."
+        nombre: "Biblioteca Recoleta",
+        precio: 320000,
+        descripcion: "Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro. Perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
+        imagen: "img/Biblioteca Recoleta.png"
     },
+
     {
         id: 4,
-        nombre: "Cama Nido Nogal",
-        descripcion: "Cama queen con cabecera tapizada y base de nogal. Unión de carpintería tradicional y confort contemporáneo."
+        nombre: "Mesa de Noche Aconcagua",
+        precio: 520000,
+        descripcion: "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales. ",
+        imagen: "img/Mesa de Noche Aconcagua.png"
     }
 ];
 
 console.log(productos);
+
+const contenedorProductos = document.getElementById("productos-container");
+
+productos.forEach(producto => {
+    const tarjeta = document.createElement("article");
+
+tarjeta.innerHTML = `
+    <img src="${producto.imagen}" alt="${producto.nombre}">
+    <h3>${producto.nombre}</h3>
+    <p>${producto.descripcion}</p>
+    <strong>$${producto.precio.toLocaleString("es-AR")}</strong>
+    <div class="acciones-producto">
+        <button>Ver detalle</button>
+        <button>Añadir al carrito</button>
+    </div>
+`;
+    contenedorProductos.appendChild(tarjeta);
+});

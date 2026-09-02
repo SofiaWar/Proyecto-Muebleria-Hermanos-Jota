@@ -55,11 +55,10 @@ header {
   padding: 1rem 0;
 }
 
-.logo {
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+.logo img {
+    width: 90px;
+    height: auto;
+    display: block;
 }
 
 nav ul {
@@ -86,6 +85,23 @@ nav a:focus-visible {
 
 #nosotros {
   padding: 4.5rem 0 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nosotros-texto {
+  max-width: 62ch;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
 }
 
 h1 {
@@ -163,4 +179,46 @@ footer p {
   #nosotros {
     padding-top: 2.75rem;
   }
+}
+
+/* ================================
+TARJETAS DE PRODUCTOS
+   ================================ */
+
+.productos-grid article strong {
+    display: block;
+    margin-top: 1rem;
+    color: var(--madera);
+    font-size: 1.2rem;
+}
+
+.productos-grid article img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.acciones-producto {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.acciones-producto button {
+    border: 1px solid var(--madera);
+    padding: 0.65rem 0.9rem;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--madera);
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.acciones-producto button:hover {
+    background: var(--madera);
+    color: var(--papel);
 }
