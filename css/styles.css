@@ -1,0 +1,166 @@
+:root {
+  --madera: #6b4a2e;
+  --madera-oscura: #3d2a1a;
+  --crema: #f6f1e8;
+  --papel: #fffaf4;
+  --texto: #2c241c;
+  --texto-suave: #5c5146;
+  --acento: #a67c52;
+  --linea: #e4d8c8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--texto);
+  background: var(--crema);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.header-inner,
+main,
+footer {
+  width: min(1100px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--madera-oscura);
+  color: var(--papel);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+#nosotros {
+  padding: 4.5rem 0 3rem;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  max-width: 16ch;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+#nosotros p {
+  max-width: 62ch;
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--texto-suave);
+}
+
+#productos {
+  padding: 1rem 0 4.5rem;
+}
+
+#productos h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.seccion-intro {
+  margin: 0 0 2rem;
+  color: var(--texto-suave);
+  max-width: 55ch;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+article {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  padding: 1.4rem 1.35rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(61, 42, 26, 0.06);
+}
+
+article h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.15rem;
+  color: var(--madera);
+}
+
+article p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.98rem;
+}
+
+footer {
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--linea);
+  color: var(--texto-suave);
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nosotros {
+    padding-top: 2.75rem;
+  }
+}
