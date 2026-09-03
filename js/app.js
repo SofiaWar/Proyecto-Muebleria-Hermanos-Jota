@@ -29,7 +29,7 @@ const productos = [
         id: 4,
         nombre: "Mesa de Noche Aconcagua",
         precio: 520000,
-        descripcion: "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales. ",
+        descripcion: "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
         imagen: "img/Mesa de Noche Aconcagua.png"
     }
 ];
@@ -38,18 +38,20 @@ console.log(productos);
 
 const contenedorProductos = document.getElementById("productos-container");
 
-productos.forEach(producto => {
+productos.forEach((producto) => {
     const tarjeta = document.createElement("article");
 
-tarjeta.innerHTML = `
-    <img src="${producto.imagen}" alt="${producto.nombre}">
-    <h3>${producto.nombre}</h3>
-    <p>${producto.descripcion}</p>
-    <strong>$${producto.precio.toLocaleString("es-AR")}</strong>
-    <div class="acciones-producto">
-        <button>Ver detalle</button>
-        <button>Añadir al carrito</button>
-    </div>
-`;
+    tarjeta.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.descripcion}</p>
+        <strong>$${producto.precio.toLocaleString("es-AR")}</strong>
+
+        <div class="acciones-producto">
+            <button type="button">Ver detalle</button>
+            <button type="button">Añadir al carrito</button>
+        </div>
+    `;
+
     contenedorProductos.appendChild(tarjeta);
 });

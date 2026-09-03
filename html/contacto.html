@@ -3,103 +3,287 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="Comunícate con Mueblería Hermanos Jota. Envíanos tu consulta sobre muebles a medida y presupuestos."
+      content="Contactate con Hermanos Jota. Visitá nuestra Casa Taller o escribinos para consultas, presupuestos y muebles a medida."
     />
-    <title>Mueblería Hermanos Jota | Contacto</title>
+
+    <title>Hermanos Jota | Contacto</title>
+
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
+
   <body>
+
     <header>
       <div class="header-inner">
-        <a class="logo" href="index.html#inicio">Mueblería Hermanos Jota</a>
+
+        <a class="logo" href="index.html">
+          <img src="img/logo.svg" alt="Hermanos Jota" />
+        </a>
+
         <nav aria-label="Navegación principal">
           <ul>
-            <li><a href="index.html#inicio">Inicio</a></li>
-            <li><a href="index.html#nosotros">Nosotros</a></li>
-            <li><a href="index.html#productos">Productos</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
+
       </div>
     </header>
 
+
     <main id="contacto-main">
-      <section class="contacto-seccion" aria-labelledby="titulo-contacto">
-        <h1 id="titulo-contacto">Hablemos de tu próximo compra</h1>
-        <p class="seccion-intro">
-          Escríbenos para consultar presupuestos, muebles a medida o conocer más
-          sobre nuestro taller.
-        </p>
 
-        <form class="formulario-contacto" action="#" method="POST">
-          <div class="campo">
-            <label for="nombre">Nombre y apellido</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ej. Ana Gómez"
-              required
-            />
-          </div>
+      <section class="contacto-hero">
 
-          <div class="campo">
-            <label for="email">Correo electrónico</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="nombre@ejemplo.com"
-              required
-            />
-          </div>
+        <div class="contacto-intro">
 
-          <div class="campo">
-            <label for="telefono">Teléfono (opcional)</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="Ej. +54 11 1234-5678"
-            />
-          </div>
+          <p class="etiqueta">CONTACTO</p>
 
-          <div class="campo">
-            <label for="motivo">Motivo de consulta</label>
-            <select id="motivo" name="motivo" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="presupuesto">Presupuesto para mueble a medida</option>
-              <option value="catalogo">Consulta sobre catálogo de productos</option>
-              <option value="restauracion">Restauración y mantenimiento</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
+          <h1>Hablemos de tu próxima pieza</h1>
 
-          <div class="campo">
-            <label for="mensaje">Mensaje</label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="5"
-              placeholder="Cuéntanos medidas estimadas, madera deseada o detalles de tu consulta..."
-              required
-            ></textarea>
-          </div>
+          <p>
+            Estamos para ayudarte a encontrar el mueble indicado,
+            pensar una pieza a medida o simplemente conocer más sobre
+            Hermanos Jota.
+          </p>
 
-          <button type="submit" class="btn-enviar">Enviar consulta</button>
-        </form>
+        </div>
+
       </section>
+
+
+      <section class="contacto-contenido">
+
+        <!-- INFORMACIÓN -->
+
+        <div class="contacto-info">
+
+          <p class="etiqueta">CASA TALLER</p>
+
+          <h2>Vení a conocernos</h2>
+
+          <p>
+            Nuestro espacio es también nuestro taller: un lugar donde
+            la madera, el oficio y las nuevas ideas se encuentran.
+          </p>
+
+
+          <div class="dato-contacto">
+
+            <strong>Dirección</strong>
+
+            <p>
+              Av. San Juan 2847<br />
+              C1232AAB · San Cristóbal<br />
+              Ciudad Autónoma de Buenos Aires
+            </p>
+
+          </div>
+
+
+          <div class="dato-contacto">
+
+            <strong>Horarios</strong>
+
+            <p>
+              Lunes a viernes · 10:00 a 19:00<br />
+              Sábados · 10:00 a 14:00
+            </p>
+
+          </div>
+
+
+          <div class="dato-contacto">
+
+            <strong>Email</strong>
+
+            <p>
+              <a href="mailto:info@hermanosjota.com.ar">
+                info@hermanosjota.com.ar
+              </a>
+              <br />
+
+              <a href="mailto:ventas@hermanosjota.com.ar">
+                ventas@hermanosjota.com.ar
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="dato-contacto">
+
+            <strong>WhatsApp</strong>
+
+            <p>
+              <a href="https://wa.me/541145678900" target="_blank">
+                +54 11 4567-8900
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="dato-contacto">
+
+            <strong>Instagram</strong>
+
+            <p>
+              <a href="https://instagram.com/muebleria_hnos_jota" target="_blank">
+                @muebleria_hnos_jota
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FORMULARIO -->
+
+        <div class="contacto-formulario">
+
+          <p class="etiqueta">ESCRIBINOS</p>
+
+          <h2>¿En qué podemos ayudarte?</h2>
+
+          <form class="formulario-contacto" action="#" method="POST">
+
+            <div class="campo">
+
+              <label for="nombre">
+                Nombre y apellido
+              </label>
+
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej. Ana Gómez"
+                required
+              />
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="email">
+                Correo electrónico
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nombre@ejemplo.com"
+                required
+              />
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="telefono">
+                Teléfono
+              </label>
+
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 11 1234-5678"
+              />
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="motivo">
+                Motivo de consulta
+              </label>
+
+              <select id="motivo" name="motivo" required>
+
+                <option value="" disabled selected>
+                  Seleccioná una opción
+                </option>
+
+                <option value="presupuesto">
+                  Presupuesto para mueble a medida
+                </option>
+
+                <option value="catalogo">
+                  Consulta sobre productos
+                </option>
+
+                <option value="restauracion">
+                  Restauración y mantenimiento
+                </option>
+
+                <option value="pedido">
+                  Seguimiento de pedido
+                </option>
+
+                <option value="garantia">
+                  Garantía / servicio
+                </option>
+
+                <option value="otro">
+                  Otro
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="mensaje">
+                Mensaje
+              </label>
+
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Contanos qué estás buscando..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="btn-enviar">
+              Enviar consulta
+            </button>
+
+          </form>
+
+        </div>
+
+      </section>
+
     </main>
 
+
     <footer>
+
       <p>
         <small>
-          © 2026 Mueblería Hermanos Jota · Taller familiar desde 1996 ·
-          Buenos Aires
+          © 2026 Hermanos Jota · Taller familiar desde 1996 · Buenos Aires
         </small>
       </p>
+
     </footer>
+
   </body>
 </html>
