@@ -1,51 +1,35 @@
 console.log("Hermanos Jota - JavaScript funcionando");
 
-const productos = [
-    {
-        id: 1,
-        nombre: "Mesa de comedor Pampa",
-        precio: 450000,
-        descripcion: "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
-        imagen: "img/Mesa Comedor Pampa.png"
-    },
 
-    {
-        id: 2,
-        nombre: "Sillón Copacabana",
-        precio: 280000,
-        descripcion: "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
-        imagen: "img/Sillón Copacabana.png"
-    },
+/* =========================================
+   FORMATEAR PRECIO
+   ========================================= */
 
-    {
-        id: 3,
-        nombre: "Biblioteca Recoleta",
-        precio: 320000,
-        descripcion: "Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro. Perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
-        imagen: "img/Biblioteca Recoleta.png"
-    },
+function formatearPrecio(precio) {
+    return `$${precio.toLocaleString("es-AR")}`;
+}
 
-    {
-        id: 4,
-        nombre: "Mesa de Noche Aconcagua",
-        precio: 520000,
-        descripcion: "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
-        imagen: "img/Mesa de Noche Aconcagua.png"
-    }
-];
 
-console.log(productos);
+/* =========================================
+   CREAR TARJETA DE PRODUCTO
+   ========================================= */
 
-const contenedorProductos = document.getElementById("productos-container");
+function crearTarjetaProducto(producto) {
 
-productos.forEach((producto) => {
     const tarjeta = document.createElement("article");
 
     tarjeta.innerHTML = `
         <img src="${producto.imagen}" alt="${producto.nombre}">
+
+        <p class="categoria-producto">
+            ${producto.categoria}
+        </p>
+
         <h3>${producto.nombre}</h3>
+
         <p>${producto.descripcion}</p>
-        <strong>$${producto.precio.toLocaleString("es-AR")}</strong>
+
+        <strong>${formatearPrecio(producto.precio)}</strong>
 
         <div class="acciones-producto">
             <button type="button">Ver detalle</button>
@@ -53,5 +37,93 @@ productos.forEach((producto) => {
         </div>
     `;
 
-    contenedorProductos.appendChild(tarjeta);
-});
+    return tarjeta;
+}
+
+
+/* =========================================
+   RENDERIZAR PRODUCTOS EN UN CONTENEDOR
+   ========================================= */
+
+function renderizarProductos(contenedor, listaProductos) {
+
+    if (!contenedor) return;
+
+    contenedor.innerHTML = "";
+
+    if (listaProductos.length === 0) {
+
+        contenedor.innerHTML = `
+            <p class="sin-resultados">
+                No encontramos productos que coincidan con tu búsqueda.
+            </p>
+        `;
+
+        return;
+    }
+
+    listaProductos.forEach((producto) => {
+        contenedor.appendChild(crearTarjetaProducto(producto));
+    });
+}
+
+
+/* =========================================
+   INICIO: solo 4 productos destacados
+   ========================================= */
+
+const contenedorDestacados =
+    document.getElementById("destacados-container");
+
+if (contenedorDestacados) {
+    renderizarProductos(contenedorDestacados, productos.slice(0, 4));
+}
+
+
+/* =========================================
+   CATÁLOGO: todos los productos
+   ========================================= */
+
+const contenedorCatalogo =
+    document.getElementById("productos-container");
+
+if (contenedorCatalogo) {
+    renderizarProductos(contenedorCatalogo, productos);
+}
+
+
+/* =========================================
+   BÚSQUEDA EN VIVO (solo en el catálogo)
+   ========================================= */
+
+const inputBusqueda = document.getElementById("buscador-input");
+
+if (inputBusqueda && contenedorCatalogo) {
+
+    let temporizadorBusqueda;
+
+    inputBusqueda.addEventListener("input", () => {
+
+        clearTimeout(temporizadorBusqueda);
+
+        temporizadorBusqueda = setTimeout(() => {
+
+            const termino = inputBusqueda.value
+                .trim()
+                .toLowerCase();
+
+            const resultados = productos.filter((producto) => {
+                return (
+                    producto.nombre.toLowerCase().includes(termino) ||
+                    producto.categoria.toLowerCase().includes(termino) ||
+                    producto.descripcion.toLowerCase().includes(termino)
+                );
+            });
+
+            renderizarProductos(contenedorCatalogo, resultados);
+
+        }, 250);
+
+    });
+
+}
