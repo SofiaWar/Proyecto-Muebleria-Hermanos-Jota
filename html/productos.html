@@ -2,90 +2,137 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Productos | Hermanos Jota</title>
+    <title>Productos | Hermanos Jota</title>
 
-<link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
 
-<header>
-    <div class="header-inner">
+    <header>
+        <div class="header-inner">
 
-      <a href="index.html" class="logo">
-        <img src="img/logo.svg" alt="Hermanos Jota">
-      </a>
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Hermanos Jota">
+            </a>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+            <nav>
+                <ul>
 
-    </div>
-  </header>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
 
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
 
-  <main id="productos-main">
+                    <li>
+                        <a href="productos.html">Productos</a>
+                    </li>
 
-    <section class="catalogo-hero">
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
 
-      <p class="etiqueta">COLECCIÓN</p>
+                    <li>
+                        <a href="carrito.html">
+                            Carrito
+                            <span id="carrito-contador">0</span>
+                        </a>
+                    </li>
 
-      <h1>Nuestros productos</h1>
+                </ul>
+            </nav>
 
-      <p>
-        Piezas pensadas para acompañar la vida cotidiana,
-        combinando oficio, materiales nobles y diseño atemporal.
-      </p>
-
-    </section>
-
-
-    <section class="catalogo">
-
-      <div class="catalogo-titulo">
-        <h2>Catálogo</h2>
-        <p>Conocé algunas de nuestras piezas.</p>
-      </div>
-
-      <div class="buscador-productos">
-
-        <label for="buscador-input" class="buscador-label">
-          Buscar productos
-        </label>
-
-        <input
-          type="search"
-          id="buscador-input"
-          placeholder="Buscar un mueble..."
-          autocomplete="off"
-        >
-
-      </div>
-
-      <div id="productos-container" class="productos-grid">
-        <!-- Los productos se cargan desde JavaScript -->
-      </div>
-
-    </section>
-
-  </main>
+        </div>
+    </header>
 
 
-  <footer>
-    <p>© 2026 Hermanos Jota. Todos los derechos reservados.</p>
-  </footer>
+    <main id="productos-main">
+
+        <section class="catalogo-hero">
+
+            <p class="etiqueta">
+                COLECCIÓN
+            </p>
+
+            <h1>
+                Nuestros productos
+            </h1>
+
+            <p>
+                Piezas pensadas para acompañar la vida cotidiana,
+                combinando oficio, materiales nobles y diseño atemporal.
+            </p>
+
+        </section>
 
 
-  <script src="../js/productos.js"></script>
-  <script src="../js/app.js"></script>
+        <section class="catalogo">
+
+            <div class="catalogo-titulo">
+
+                <h2>
+                    Catálogo
+                </h2>
+
+                <p>
+                    Conocé algunas de nuestras piezas.
+                </p>
+
+            </div>
+
+
+            <div class="buscador-productos">
+
+                <label
+                    for="buscador-input"
+                    class="buscador-label">
+
+                    Buscar productos
+
+                </label>
+
+                <input
+                    type="search"
+                    id="buscador-input"
+                    placeholder="Buscar un mueble..."
+                    autocomplete="off">
+
+            </div>
+
+
+            <div
+                id="productos-container"
+                class="productos-grid">
+
+                <!-- Los productos se cargan desde JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Hermanos Jota. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- IMPORTANTE:
+         SOLO cargamos app.js.
+         NO cargar productos.js -->
+
+    <script src="../js/app.js"></script>
 
 </body>
 

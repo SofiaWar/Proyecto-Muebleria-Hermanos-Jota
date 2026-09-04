@@ -10,7 +10,7 @@ const productos = [
     {
         id: 1,
         nombre: "Mesa de comedor Pampa",
-        precio: 450000,
+        precio: 1800000,
 
         descripcion: "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
 
@@ -23,7 +23,7 @@ const productos = [
             "Terminación natural"
         ],
 
-        imagen: "img/Mesa Comedor Pampa.png",
+        imagen: "img/Mesa_Comedor_Pampa.png",
 
         destacado: true
     },
@@ -32,7 +32,7 @@ const productos = [
     {
         id: 2,
         nombre: "Sillón Copacabana",
-        precio: 280000,
+        precio: 930000,
 
         descripcion: "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
 
@@ -45,7 +45,7 @@ const productos = [
             "Alto nivel de confort"
         ],
 
-        imagen: "img/Sillón Copacabana.png",
+        imagen: "img/Sillon_Copacabana.png",
 
         destacado: true
     },
@@ -67,7 +67,7 @@ const productos = [
             "Diseño adaptable"
         ],
 
-        imagen: "img/Biblioteca Recoleta.png",
+        imagen: "img/Biblioteca_Recoleta.png",
 
         destacado: true
     },
@@ -89,7 +89,7 @@ const productos = [
             "Terminación natural"
         ],
 
-        imagen: "img/Mesa de Noche Aconcagua.png",
+        imagen: "img/Mesa_de_Noche_Aconcagua.png",
 
         destacado: false
     },
@@ -98,7 +98,7 @@ const productos = [
     {
         id: 5,
         nombre: "Aparador Uspallata",
-        precio: 0,
+        precio: 1250000,
 
         descripcion: "Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. Su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
 
@@ -110,7 +110,7 @@ const productos = [
             "Capacidad: 6 compartimentos interiores"
         ],
 
-        imagen: " img/Aparador Uspallata.png",
+        imagen: " img/Aparador_Uspallata.png",
 
         destacado: false
     },
@@ -119,7 +119,7 @@ const productos = [
     {
         id: 6,
         nombre: "Butaca Mendoza",
-        precio: 0,
+        precio: 850000,
 
         descripcion: "Butaca tapizada en bouclé Dusty Rose con base de madera de guatambú. El respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
 
@@ -131,7 +131,7 @@ const productos = [
             "Confort: Espuma alta densidad"
         ],
 
-        imagen: "img/Butaca Mendoza.png",
+        imagen: "img/Butaca_Mendoza.png",
 
         destacado: false
     },
@@ -140,7 +140,7 @@ const productos = [
     {
         id: 7,
         nombre: "Mesa de Centro Araucaria",
-        precio: 0,
+        precio: 780000,
 
         descripcion: "Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
 
@@ -152,7 +152,7 @@ const productos = [
             "Carga máxima: 25 kg distribuidos"
         ],
 
-        imagen: " img/Mesa de Centro Araucaria.png",
+        imagen: " img/Mesa_de_Centro_Araucaria.png",
 
         destacado: false
     },
@@ -161,7 +161,7 @@ const productos = [
     {
         id: 8,
         nombre: "Sofá Patagonia",
-        precio: 0,
+        precio: 2500000,
 
         descripcion: "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de madera. Los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
 
@@ -173,7 +173,7 @@ const productos = [
             "Sostenibilidad: Materiales 100% reciclables"
         ],
 
-        imagen: " img/Sofá Patagonia.png",
+        imagen: " img/Sofa_Patagonia.png",
 
         destacado: false
     },
@@ -182,7 +182,7 @@ const productos = [
     {
         id: 9,
         nombre: "Sillas Córdoba",
-        precio: 0,
+        precio: 340000,
 
         descripcion: "Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green. Su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
 
@@ -194,7 +194,7 @@ const productos = [
             "Incluye: Set de 4 sillas"
         ],
 
-        imagen: " img/Sillas Córdoba.png",
+        imagen: " img/Sillas_Cordoba.png",
 
         destacado: false
     },
@@ -203,7 +203,7 @@ const productos = [
     {
         id: 10,
         nombre: "Escritorio Costa",
-        precio: 0,
+        precio: 560000,
 
         descripcion: "Escritorio compacto con cajón organizador y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
 
@@ -215,7 +215,7 @@ const productos = [
             "Cables: Pasacables integrado"
         ],
 
-        imagen: " img/Escritorio Costa.png",
+        imagen: " img/Escritorio_Costa.png",
 
         destacado: false
     },
@@ -236,7 +236,7 @@ const productos = [
             "Certificación: Ergonomía europea EN 1335"
         ],
 
-        imagen: " img/Silla de Trabajo Belgrano.png",
+        imagen: " img/Silla_de_Trabajo_Belgrano.png",
 
         destacado: false
     }
@@ -502,3 +502,501 @@ document.addEventListener("click", (evento) => {
     );
 
 });
+
+/* =====================================================
+   CARRITO DE COMPRAS
+   ===================================================== */
+
+
+/* Obtener carrito guardado */
+
+let carrito = JSON.parse(
+    localStorage.getItem("carritoHermanosJota")
+) || [];
+
+
+/* Guardar carrito */
+
+function guardarCarrito() {
+
+    localStorage.setItem(
+        "carritoHermanosJota",
+        JSON.stringify(carrito)
+    );
+
+}
+
+
+/* Agregar producto */
+
+function agregarAlCarrito(id) {
+
+    const producto = productos.find(
+        (producto) => producto.id === id
+    );
+
+    if (!producto) {
+        return;
+    }
+
+
+    const productoExistente = carrito.find(
+        (item) => item.id === id
+    );
+
+
+    if (productoExistente) {
+
+        productoExistente.cantidad++;
+
+    } else {
+
+        carrito.push({
+            id: producto.id,
+            nombre: producto.nombre,
+            precio: producto.precio,
+            imagen: producto.imagen,
+            cantidad: 1
+        });
+
+    }
+
+
+    guardarCarrito();
+
+    actualizarContadorCarrito();
+
+    mostrarCarrito();
+
+}
+
+
+/* Escuchar botones "Añadir al carrito" */
+
+document.addEventListener("click", (evento) => {
+
+    if (
+        !evento.target.classList.contains("btn-carrito") &&
+        !evento.target.classList.contains("btn-modal-carrito")
+    ) {
+        return;
+    }
+
+
+    const id = Number(
+        evento.target.dataset.id
+    );
+
+
+    agregarAlCarrito(id);
+
+
+    /* Mostrar mensaje */
+
+    const producto = productos.find(
+        (producto) => producto.id === id
+    );
+
+    if (producto) {
+
+        alert(
+            `${producto.nombre} fue añadido al carrito.`
+        );
+
+    }
+
+});
+
+
+/* =====================================================
+   CONTADOR DEL CARRITO
+   ===================================================== */
+
+function actualizarContadorCarrito() {
+
+    const contador =
+        document.getElementById("carrito-contador");
+
+
+    if (!contador) {
+        return;
+    }
+
+
+    const cantidadTotal = carrito.reduce(
+        (total, producto) =>
+            total + producto.cantidad,
+        0
+    );
+
+
+    contador.textContent = cantidadTotal;
+
+}
+
+
+/* =====================================================
+   MOSTRAR CARRITO
+   ===================================================== */
+
+function mostrarCarrito() {
+
+    const contenedor =
+        document.getElementById("carrito-productos");
+
+    const carritoVacio =
+        document.getElementById("carrito-vacio");
+
+    const carritoContenido =
+        document.getElementById("carrito-contenido");
+
+
+    if (!contenedor) {
+        return;
+    }
+
+
+    contenedor.innerHTML = "";
+
+
+    if (carrito.length === 0) {
+
+        carritoVacio.style.display = "block";
+
+        carritoContenido.style.display = "none";
+
+        actualizarTotales();
+
+        return;
+    }
+
+
+    carritoVacio.style.display = "none";
+
+    carritoContenido.style.display = "block";
+
+
+    carrito.forEach((producto) => {
+
+        const item =
+            document.createElement("article");
+
+        item.className = "item-carrito";
+
+
+        item.innerHTML = `
+
+            <img
+                src="${producto.imagen}"
+                alt="${producto.nombre}">
+
+            <div class="item-carrito-info">
+
+                <h3>
+                    ${producto.nombre}
+                </h3>
+
+                <p>
+                    $${producto.precio.toLocaleString("es-AR")}
+                </p>
+
+                <div class="cantidad-producto">
+
+                    <button
+                        type="button"
+                        class="btn-cantidad"
+                        data-id="${producto.id}"
+                        data-accion="restar">
+                        −
+                    </button>
+
+                    <span>
+                        ${producto.cantidad}
+                    </span>
+
+                    <button
+                        type="button"
+                        class="btn-cantidad"
+                        data-id="${producto.id}"
+                        data-accion="sumar">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="item-carrito-final">
+
+                <strong>
+                    $${(
+                        producto.precio *
+                        producto.cantidad
+                    ).toLocaleString("es-AR")}
+                </strong>
+
+                <button
+                    type="button"
+                    class="btn-eliminar"
+                    data-id="${producto.id}">
+                    Eliminar
+                </button>
+
+            </div>
+
+        `;
+
+
+        contenedor.appendChild(item);
+
+    });
+
+
+    actualizarTotales();
+
+}
+
+
+/* =====================================================
+   CAMBIAR CANTIDAD
+   ===================================================== */
+
+document.addEventListener("click", (evento) => {
+
+    if (
+        !evento.target.classList.contains("btn-cantidad")
+    ) {
+        return;
+    }
+
+
+    const id =
+        Number(evento.target.dataset.id);
+
+    const accion =
+        evento.target.dataset.accion;
+
+
+    const producto =
+        carrito.find(
+            (item) => item.id === id
+        );
+
+
+    if (!producto) {
+        return;
+    }
+
+
+    if (accion === "sumar") {
+
+        producto.cantidad++;
+
+    }
+
+
+    if (accion === "restar") {
+
+        producto.cantidad--;
+
+        if (producto.cantidad <= 0) {
+
+            carrito =
+                carrito.filter(
+                    (item) => item.id !== id
+                );
+
+        }
+
+    }
+
+
+    guardarCarrito();
+
+    actualizarContadorCarrito();
+
+    mostrarCarrito();
+
+});
+
+
+/* =====================================================
+   ELIMINAR PRODUCTO
+   ===================================================== */
+
+document.addEventListener("click", (evento) => {
+
+    if (
+        !evento.target.classList.contains("btn-eliminar")
+    ) {
+        return;
+    }
+
+
+    const id =
+        Number(evento.target.dataset.id);
+
+
+    carrito =
+        carrito.filter(
+            (producto) => producto.id !== id
+        );
+
+
+    guardarCarrito();
+
+    actualizarContadorCarrito();
+
+    mostrarCarrito();
+
+});
+
+
+/* =====================================================
+   TOTALES
+   ===================================================== */
+
+function calcularTotal() {
+
+    return carrito.reduce(
+        (total, producto) => {
+
+            return total +
+                producto.precio *
+                producto.cantidad;
+
+        },
+        0
+    );
+
+}
+
+
+function actualizarTotales() {
+
+    const subtotal =
+        document.getElementById(
+            "carrito-subtotal"
+        );
+
+    const total =
+        document.getElementById(
+            "carrito-total"
+        );
+
+    const botonTotal =
+        document.getElementById(
+            "boton-total"
+        );
+
+
+    const totalCompra =
+        calcularTotal();
+
+
+    const totalFormateado =
+        `$${totalCompra.toLocaleString("es-AR")}`;
+
+
+    if (subtotal) {
+
+        subtotal.textContent =
+            totalFormateado;
+
+    }
+
+
+    if (total) {
+
+        total.textContent =
+            totalFormateado;
+
+    }
+
+
+    if (botonTotal) {
+
+        botonTotal.textContent =
+            totalFormateado;
+
+    }
+
+}
+
+
+/* =====================================================
+   PAGO FICTICIO
+   ===================================================== */
+
+const formularioPago =
+    document.getElementById(
+        "formulario-pago"
+    );
+
+
+if (formularioPago) {
+
+    formularioPago.addEventListener(
+        "submit",
+        (evento) => {
+
+            evento.preventDefault();
+
+
+            if (carrito.length === 0) {
+
+                alert(
+                    "Tu carrito está vacío."
+                );
+
+                return;
+
+            }
+
+
+            /* Ocultar formulario */
+
+            formularioPago.style.display =
+                "none";
+
+
+            /* Mostrar confirmación */
+
+            const compraExitosa =
+                document.getElementById(
+                    "compra-exitosa"
+                );
+
+
+            if (compraExitosa) {
+
+                compraExitosa.style.display =
+                    "block";
+
+            }
+
+
+            /* Vaciar carrito */
+
+            carrito = [];
+
+            guardarCarrito();
+
+            actualizarContadorCarrito();
+
+            mostrarCarrito();
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   INICIALIZAR CARRITO
+   ===================================================== */
+
+actualizarContadorCarrito();
+
+mostrarCarrito();

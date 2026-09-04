@@ -1,11 +1,12 @@
 /* =========================================================
    HERMANOS JOTA
-   Mueblería — Estilos generales
+   Mueblería — Hoja de estilos
    ========================================================= */
 
-/* -------------------------
+
+/* =========================================================
    VARIABLES
-   ------------------------- */
+   ========================================================= */
 
 :root {
     --siena: #A0522D;
@@ -24,7 +25,7 @@
 
     --linea: #DED0C1;
 
-    --radio: 3px;
+    --radio: 4px;
 }
 
 
@@ -104,18 +105,23 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+
     background: var(--madera);
-    box-shadow: 0 3px 18px rgba(61, 42, 26, 0.14);
+
+    box-shadow:
+        0 3px 18px rgba(61, 42, 26, 0.14);
 }
 
 .header-inner {
     width: min(1180px, 92%);
     min-height: 82px;
+
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 2rem;
 }
 
@@ -127,18 +133,25 @@ header {
 .logo img {
     width: 120px;
     height: auto;
+
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.04);
 }
 
 
-/* -------------------------
+/* =========================================================
    NAV
-   ------------------------- */
+   ========================================================= */
 
 nav ul {
     list-style: none;
 
     display: flex;
     align-items: center;
+
     gap: 2rem;
 }
 
@@ -146,6 +159,7 @@ nav a {
     position: relative;
 
     color: var(--alabastro);
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.76rem;
     font-weight: 600;
@@ -154,6 +168,7 @@ nav a {
     text-transform: uppercase;
 
     text-decoration: none;
+
     opacity: 0.9;
 
     transition:
@@ -165,6 +180,7 @@ nav a::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: -7px;
 
@@ -187,21 +203,16 @@ nav a:hover::after {
 
 
 /* =========================================================
-   CONTENEDOR GENERAL
+   MAIN
    ========================================================= */
 
 main {
     width: 100%;
 }
 
-#inicio,
-#productos-main {
-    width: 100%;
-}
-
 
 /* =========================================================
-   ETIQUETAS
+   ETIQUETA
    ========================================================= */
 
 .etiqueta {
@@ -209,7 +220,6 @@ main {
 
     color: var(--siena) !important;
 
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
 
@@ -219,14 +229,14 @@ main {
 
 
 /* =========================================================
-   INICIO — HERO / NOSOTROS
+   INICIO
    ========================================================= */
 
 #nosotros {
     width: min(1180px, 92%);
-    margin: 0 auto;
-
     min-height: 620px;
+
+    margin: 0 auto;
     padding: 6rem 0;
 
     display: grid;
@@ -246,6 +256,7 @@ main {
     color: var(--siena);
 
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: clamp(2.7rem, 5vw, 4.4rem);
 
     line-height: 1.06;
@@ -272,11 +283,11 @@ main {
 
     position: absolute;
 
-    width: 90px;
-    height: 90px;
-
     right: -18px;
     bottom: -18px;
+
+    width: 90px;
+    height: 90px;
 
     border-right: 2px solid var(--dorado);
     border-bottom: 2px solid var(--dorado);
@@ -295,6 +306,17 @@ main {
 
     box-shadow:
         0 15px 35px rgba(61, 42, 26, 0.14);
+
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+.nosotros-imagen:hover img {
+    transform: scale(1.015);
+
+    box-shadow:
+        0 20px 40px rgba(61, 42, 26, 0.18);
 }
 
 
@@ -306,6 +328,7 @@ main {
     width: min(1180px, 92%);
     margin: 0 auto;
 
+    margin: 0 auto;
     padding: 5.5rem 0 6.5rem;
 
     border-top: 1px solid rgba(160, 82, 45, 0.18);
@@ -324,143 +347,11 @@ main {
 
 .seccion-intro {
     max-width: 650px;
+
     margin-bottom: 2.8rem;
 
     font-size: 0.98rem;
     line-height: 1.8;
-}
-
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
-}
-
-article {
-  background: var(--papel);
-  border: 1px solid var(--linea);
-  border-radius: 4px;
-  padding: 1.4rem 1.35rem 1.5rem;
-  box-shadow: 0 8px 24px rgba(61, 42, 26, 0.06);
-}
-
-article h3 {
-  margin: 0 0 0.65rem;
-  font-size: 1.15rem;
-  color: var(--madera);
-}
-
-article p {
-  margin: 0;
-  color: var(--texto-suave);
-  font-size: 0.98rem;
-}
-
-
-/* =========================================
-FOOTER
-   ========================================= */
-
-footer {
-  padding: 1.5rem 0 2.5rem;
-  border-top: 1px solid var(--linea);
-  color: var(--texto-suave);
-}
-
-footer p {
-  margin: 0;
-}
-
-@media (max-width: 640px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #nosotros {
-    padding-top: 2.75rem;
-  }
-}
-
-/* =========================================
-TARJETAS DE PRODUCTOS
-   ========================================= */
-
-.productos-grid article strong {
-  display: block;
-  margin-top: 1rem;
-  color: var(--madera);
-  font-size: 1.2rem;
-}
-
-.productos-grid article img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.acciones-producto {
-  display: flex;
-  gap: 0.6rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.acciones-producto button {
-  border: 1px solid var(--madera);
-  padding: 0.65rem 0.9rem;
-  border-radius: 4px;
-  background: transparent;
-  color: var(--madera);
-  font-family: inherit;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.acciones-producto button:hover {
-  background: var(--madera);
-  color: var(--papel);
-}
-
-
-/* =========================================================
-   VER CATÁLOGO
-   ========================================================= */
-
-.ver-catalogo {
-    margin-top: 3rem;
-
-    text-align: center;
-}
-
-.ver-catalogo a {
-    display: inline-block;
-
-    padding: 0.9rem 1.6rem;
-
-    border: 1px solid var(--siena);
-
-    color: var(--siena);
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
-    text-decoration: none;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
-}
-
-.ver-catalogo a:hover {
-    background: var(--siena);
-    color: var(--alabastro);
 }
 
 
@@ -469,13 +360,12 @@ TARJETAS DE PRODUCTOS
    ========================================================= */
 
 #productos-main {
-    min-height: 70vh;
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
 }
 
 .catalogo-hero {
-    width: min(1180px, 92%);
-    margin: 0 auto;
-
     padding: 5.5rem 0 4rem;
 
     border-bottom: 1px solid var(--linea);
@@ -501,9 +391,6 @@ TARJETAS DE PRODUCTOS
 }
 
 .catalogo {
-    width: min(1180px, 92%);
-    margin: 0 auto;
-
     padding: 4.5rem 0 6rem;
 }
 
@@ -514,12 +401,215 @@ TARJETAS DE PRODUCTOS
 .catalogo-titulo h2 {
     margin-bottom: 0.4rem;
 
-    font-size: 2.2rem;
     color: var(--madera);
+
+    font-size: 2.2rem;
 }
 
 .catalogo-titulo p {
     font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   GRILLA DE PRODUCTOS
+   ========================================================= */
+
+.productos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1.7rem;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.productos-grid article {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+
+    box-shadow:
+        0 7px 25px rgba(61, 42, 26, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.productos-grid article:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(61, 42, 26, 0.12);
+}
+
+
+/* =========================================================
+   IMAGEN DE PRODUCTO
+   ========================================================= */
+
+.productos-grid article img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: contain;
+
+    background: #F0E4D5;
+
+    border-bottom: 1px solid var(--linea);
+
+    transition: transform 0.5s ease;
+}
+
+.productos-grid article:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   TEXTO DE PRODUCTO
+   ========================================================= */
+
+.productos-grid article h3 {
+    padding: 1.3rem 1.3rem 0.4rem;
+
+    color: var(--madera);
+
+    font-size: 1.35rem;
+}
+
+.productos-grid article p {
+    padding: 0 1.3rem;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.productos-grid article strong {
+    display: block;
+
+    padding: 1rem 1.3rem 0;
+
+    color: var(--siena);
+
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BOTONES DE PRODUCTO
+   ========================================================= */
+
+.acciones-producto {
+    margin-top: auto;
+    padding: 1.3rem;
+
+    display: flex;
+
+    gap: 0.7rem;
+}
+
+.acciones-producto button {
+    flex: 1;
+
+    min-height: 42px;
+
+    padding: 0.65rem 0.8rem;
+
+    border: 1px solid var(--siena);
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    transition:
+        transform 0.2s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.acciones-producto button:first-child {
+    background: transparent;
+    color: var(--siena);
+}
+
+.acciones-producto button:last-child {
+    background: var(--siena);
+    color: var(--alabastro);
+}
+
+.acciones-producto button:hover {
+    transform: translateY(-2px);
+
+    background: var(--madera);
+    border-color: var(--madera);
+
+    color: white;
+
+    box-shadow:
+        0 5px 12px rgba(61, 42, 26, 0.12);
+}
+
+
+/* =========================================================
+   VER CATÁLOGO
+   ========================================================= */
+
+.ver-catalogo {
+    margin-top: 3rem;
+
+    text-align: center;
+}
+
+.ver-catalogo a {
+    display: inline-block;
+
+    padding: 0.9rem 1.6rem;
+
+    border: 1px solid var(--siena);
+
+    color: var(--siena);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.ver-catalogo a:hover {
+    transform: translateY(-2px);
+
+    background: var(--siena);
+
+    color: var(--alabastro);
 }
 
 
@@ -531,6 +621,7 @@ TARJETAS DE PRODUCTOS
     width: min(1180px, 92%);
     margin: 0 auto;
 
+    margin: 0 auto;
     padding: 6rem 0;
 
     display: grid;
@@ -543,6 +634,7 @@ TARJETAS DE PRODUCTOS
 
 .nosotros-principal h1 {
     color: var(--siena);
+
     font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
@@ -556,6 +648,7 @@ TARJETAS DE PRODUCTOS
     width: min(1180px, 92%);
     margin: 0 auto;
 
+    margin: 0 auto;
     padding: 5rem 0;
 
     border-top: 1px solid var(--linea);
@@ -573,8 +666,8 @@ TARJETAS DE PRODUCTOS
 
 .nosotros-sustentabilidad {
     width: min(1180px, 92%);
-    margin: 0 auto;
 
+    margin: 0 auto;
     padding: 3.5rem;
 
     background: #EEDFCC;
@@ -595,6 +688,7 @@ TARJETAS DE PRODUCTOS
     width: min(1180px, 92%);
     margin: 0 auto;
 
+    margin: 0 auto;
     padding: 5rem 0;
 }
 
@@ -617,8 +711,8 @@ TARJETAS DE PRODUCTOS
 
 .contacto-hero {
     width: min(1180px, 92%);
-    margin: 0 auto;
 
+    margin: 0 auto;
     padding: 5rem 0 3.5rem;
 }
 
@@ -640,8 +734,8 @@ TARJETAS DE PRODUCTOS
 
 .contacto-contenido {
     width: min(1180px, 92%);
-    margin: 0 auto;
 
+    margin: 0 auto;
     padding: 3rem 0 6rem;
 
     display: grid;
@@ -655,6 +749,7 @@ TARJETAS DE PRODUCTOS
     margin-bottom: 1.3rem;
 
     color: var(--madera);
+
     font-size: 2rem;
 }
 
@@ -713,6 +808,7 @@ TARJETAS DE PRODUCTOS
 
 .campo textarea {
     min-height: 140px;
+
     resize: vertical;
 }
 
@@ -746,18 +842,21 @@ TARJETAS DE PRODUCTOS
     text-transform: uppercase;
 
     transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+        transform 0.2s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .btn-enviar:hover {
+    transform: translateY(-2px);
+
     background: var(--madera);
     border-color: var(--madera);
 }
 
 
 /* =========================================================
-   MODAL DE PRODUCTO
+   MODAL
    ========================================================= */
 
 .modal-producto {
@@ -768,73 +867,57 @@ TARJETAS DE PRODUCTOS
     z-index: 1000;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     padding: 2rem;
 
     background: rgba(61, 42, 26, 0.75);
+
+    animation: fondoModal 0.25s ease both;
 }
 
-.catalogo-titulo h2 {
-  margin: 0 0 0.3rem;
-  color: var(--madera-oscura);
-  font-size: 1.8rem;
+.modal-contenido {
+    position: relative;
+
+    width: min(900px, 100%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2.5rem;
+
+    padding: 2.5rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linea);
+    border-radius: 4px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28);
+
+    animation: aparecerModal 0.25s ease;
 }
 
-.catalogo-titulo p {
-  margin: 0;
-  color: var(--texto-suave);
+.modal-imagen {
+    width: 100%;
+
+    background: #F0E4D5;
+
+    border-radius: 2px;
 }
 
+.modal-info h2 {
+    margin-bottom: 1rem;
 
-/* Tarjetas */
+    color: var(--madera);
 
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-}
-
-.productos-grid article {
-  background: var(--papel);
-  border: 1px solid var(--linea);
-  border-radius: 10px;
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.productos-grid article:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(74, 54, 40, 0.10);
-}
-
-
-/* Imagen */
-
-.productos-grid article img {
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  display: block;
-  margin-bottom: 1.2rem;
-  background: var(--crema);
-  border-radius: 6px;
-}
-
-
-/* Categoría (etiqueta chica sobre el nombre) */
-
-.productos-grid .categoria-producto {
-  margin: 0 0 0.35rem;
-  color: var(--acento);
-  font-family: Inter, Arial, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .modal-info h3 {
@@ -845,80 +928,111 @@ TARJETAS DE PRODUCTOS
     font-size: 1.15rem;
 }
 
-
-/* Descripción */
-
-.productos-grid article p {
-  margin: 0 0 1rem;
-  color: var(--texto-suave);
-  font-size: 0.95rem;
-  line-height: 1.6;
+.modal-info p {
+    line-height: 1.7;
 }
 
-
-/* Precio */
-
-.productos-grid article strong {
-  margin-top: auto;
-  margin-bottom: 1rem;
-  color: var(--madera);
-  font-size: 1.15rem;
+.modal-info ul {
+    padding-left: 1.2rem;
 }
 
+.modal-info li {
+    margin-bottom: 0.45rem;
 
-/* Botones */
-
-.acciones-producto {
-  display: flex;
-  gap: 0.7rem;
+    color: var(--texto-suave);
 }
 
-.acciones-producto button {
-  flex: 1;
-  padding: 0.7rem 0.8rem;
-  border: 1px solid var(--madera);
-  border-radius: 5px;
-  background: transparent;
-  color: var(--madera-oscura);
-  font-family: inherit;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+.modal-precio {
+    margin-top: 1.5rem;
+
+    color: var(--siena);
+
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.acciones-producto button:hover {
-  background: var(--madera);
-  color: #ffffff;
+.cerrar-modal {
+    position: absolute;
+
+    top: 1rem;
+    right: 1.2rem;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--madera);
+
+    cursor: pointer;
+
+    font-size: 1.7rem;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
+.cerrar-modal:hover {
+    color: var(--siena);
 
-/* A partir de tablet, más columnas */
-
-@media (min-width: 700px) {
-
-  .productos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+    transform: rotate(5deg);
 }
-
-@media (min-width: 1000px) {
-
-  .productos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-}
-
 
 
 /* =========================================================
-   ANIMACIÓN
+   FOOTER
    ========================================================= */
 
-@keyframes aparecerModal {
+footer {
+    padding: 2rem 0 2.5rem;
+
+    background: var(--madera);
+
+    text-align: center;
+}
+
+footer p {
+    color: var(--alabastro);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+
+main {
+    animation: aparecerPagina 0.55s ease both;
+}
+
+@keyframes aparecerPagina {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#nosotros h1,
+.catalogo-hero h1,
+.contacto-intro h1 {
+    animation: aparecerTitulo 0.7s ease both;
+}
+
+@keyframes aparecerTitulo {
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -932,14 +1046,108 @@ TARJETAS DE PRODUCTOS
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   ANIMACIÓN DE PRODUCTOS
+   ========================================================= */
+
+.productos-grid article {
+    animation: aparecerProducto 0.5s ease both;
+}
+
+.productos-grid article:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.productos-grid article:nth-child(2) {
+    animation-delay: 0.10s;
+}
+
+.productos-grid article:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.productos-grid article:nth-child(4) {
+    animation-delay: 0.20s;
+}
+
+.productos-grid article:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.productos-grid article:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.productos-grid article:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.productos-grid article:nth-child(8) {
+    animation-delay: 0.40s;
+}
+
+.productos-grid article:nth-child(9) {
+    animation-delay: 0.45s;
+}
+
+.productos-grid article:nth-child(10) {
+    animation-delay: 0.50s;
+}
+
+.productos-grid article:nth-child(11) {
+    animation-delay: 0.55s;
+}
+
+@keyframes aparecerProducto {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ANIMACIÓN MODAL
+   ========================================================= */
+
+@keyframes fondoModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
 
     #nosotros {
         grid-template-columns: 1fr;
+
         gap: 3rem;
+
         min-height: auto;
     }
 
@@ -955,17 +1163,17 @@ TARJETAS DE PRODUCTOS
         grid-template-columns: 1fr;
     }
 
-@media (max-width: 700px) {
+    .contacto-contenido {
+        grid-template-columns: 1fr;
 
-  .productos-grid {
-    grid-template-columns: 1fr;
-  }
+        gap: 3rem;
+    }
 
 }
 
 
 /* =========================================================
-   RESPONSIVE — CELULAR
+   CELULAR
    ========================================================= */
 
 @media (max-width: 640px) {
@@ -976,6 +1184,7 @@ TARJETAS DE PRODUCTOS
         padding: 1rem 0;
 
         flex-direction: column;
+
         gap: 1rem;
     }
 
@@ -985,7 +1194,9 @@ TARJETAS DE PRODUCTOS
 
     nav ul {
         gap: 1rem;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -995,6 +1206,7 @@ TARJETAS DE PRODUCTOS
 
     #nosotros {
         width: 88%;
+
         padding: 4rem 0;
     }
 
@@ -1004,6 +1216,7 @@ TARJETAS DE PRODUCTOS
 
     #productos {
         width: 88%;
+
         padding: 4rem 0;
     }
 
@@ -1011,8 +1224,7 @@ TARJETAS DE PRODUCTOS
         grid-template-columns: 1fr;
     }
 
-    .catalogo-hero,
-    .catalogo {
+    #productos-main {
         width: 88%;
     }
 
@@ -1037,118 +1249,571 @@ TARJETAS DE PRODUCTOS
         padding: 2rem;
     }
 
-  .contacto-formulario {
-    padding: 1.5rem;
-  }
+    .contacto-formulario {
+        padding: 1.5rem;
+    }
+
+    .modal-producto {
+        padding: 1rem;
+    }
+
+    .modal-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+        padding: 1.5rem;
+    }
+
 }
 
+
+/* =========================================================
+   CELULAR PEQUEÑO
+   ========================================================= */
 
 @media (max-width: 480px) {
 
-  .acciones-producto {
+    .acciones-producto {
+        flex-direction: column;
+    }
+
+    .productos-grid article img {
+        aspect-ratio: 4 / 3;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+/* =========================================================
+   CARRITO
+   ========================================================= */
+
+#carrito-main {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECCIÓN CARRITO
+   ========================================================= */
+
+.carrito-seccion {
+    padding: 5rem 0 4rem;
+}
+
+.carrito-seccion h1 {
+    margin-bottom: 0.8rem;
+
+    color: var(--siena);
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+}
+
+.carrito-intro {
+    margin-bottom: 3rem;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   CARRITO VACÍO
+   ========================================================= */
+
+.carrito-vacio {
+    padding: 4rem 2rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linea);
+
+    text-align: center;
+}
+
+.carrito-vacio h2 {
+    margin-bottom: 0.7rem;
+
+    font-size: 2rem;
+}
+
+.carrito-vacio p {
+    margin-bottom: 1.5rem;
+}
+
+.btn-carrito-volver {
+    display: inline-block;
+
+    padding: 0.9rem 1.5rem;
+
+    background: var(--siena);
+
+    color: var(--alabastro);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   ITEMS
+   ========================================================= */
+
+#carrito-productos {
+    display: flex;
     flex-direction: column;
-  }
+
+    gap: 1rem;
 }
 
-#productos-main {
-  width: 92%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 0;
+.item-carrito {
+    display: grid;
+
+    grid-template-columns: 130px 1fr auto;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding: 1.3rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linea);
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
 }
 
-.catalogo-hero {
-  padding: 60px 0 40px;
-  border-bottom: 1px solid #e4d8c8;
+.item-carrito:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(61, 42, 26, 0.08);
 }
 
-.catalogo-hero h1 {
-  color: #3d2a1a;
-  font-size: 50px;
-  margin: 0 0 20px;
+.item-carrito img {
+    width: 130px;
+    height: 100px;
+
+    object-fit: contain;
+
+    background: #F0E4D5;
 }
 
-.catalogo-hero p {
-  color: #5c5146;
-  font-size: 18px;
+.item-carrito-info h3 {
+    margin-bottom: 0.4rem;
+
+    color: var(--madera);
+
+    font-size: 1.2rem;
 }
 
-.catalogo {
-  padding: 50px 0;
+.item-carrito-info p {
+    color: var(--siena);
+
+    font-weight: 600;
 }
 
-.catalogo-titulo h2 {
-  color: #3d2a1a;
-  font-size: 32px;
+
+/* =========================================================
+   CANTIDAD
+   ========================================================= */
+
+.cantidad-producto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    margin-top: 1rem;
 }
 
-.catalogo-titulo p {
-  color: #5c5146;
+.cantidad-producto span {
+    min-width: 25px;
+
+    text-align: center;
+
+    font-weight: 600;
 }
 
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.btn-cantidad {
+    width: 30px;
+    height: 30px;
+
+    background: transparent;
+
+    border: 1px solid var(--linea);
+
+    color: var(--madera);
+
+    cursor: pointer;
+
+    font-size: 1.1rem;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
-.productos-grid article {
-  background: #fffaf4;
-  border: 1px solid #e4d8c8;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 8px 25px rgba(61, 42, 26, 0.08);
+.btn-cantidad:hover {
+    background: var(--siena);
+
+    color: white;
 }
 
-.productos-grid article img {
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  background: #f6f1e8;
-  border-radius: 6px;
-  margin-bottom: 20px;
+
+/* =========================================================
+   PRECIO FINAL
+   ========================================================= */
+
+.item-carrito-final {
+    min-width: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 1rem;
 }
 
-.productos-grid h3 {
-  color: #3d2a1a;
-  font-size: 22px;
-  margin: 0 0 10px;
+.item-carrito-final strong {
+    color: var(--siena);
+
+    font-size: 1.15rem;
 }
 
-.productos-grid article p {
-  color: #5c5146;
-  line-height: 1.6;
+.btn-eliminar {
+    padding: 0.4rem 0;
+
+    background: none;
+
+    border: none;
+
+    color: var(--texto-suave);
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+
+    text-decoration: underline;
+
+    transition: color 0.2s ease;
 }
 
-.productos-grid article strong {
-  display: block;
-  color: #6b4a2e;
-  font-size: 20px;
-  margin: 15px 0;
+.btn-eliminar:hover {
+    color: var(--siena);
 }
 
-.acciones-producto {
-  display: flex;
-  gap: 10px;
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.carrito-resumen {
+    width: min(500px, 100%);
+
+    margin: 2rem 0 0 auto;
+
+    padding: 2rem;
+
+    background: #EEDFCC;
+
+    border: 1px solid var(--linea);
 }
 
-.acciones-producto button {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid #6b4a2e;
-  border-radius: 5px;
-  background: transparent;
-  color: #6b4a2e;
-  cursor: pointer;
+.carrito-resumen h2 {
+    margin-bottom: 1.5rem;
+
+    color: var(--madera);
+
+    font-size: 1.6rem;
 }
 
-.acciones-producto button:hover {
-  background: #6b4a2e;
-  color: white;
+.resumen-linea {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 0.7rem 0;
+
+    border-bottom: 1px solid rgba(61, 42, 26, 0.12);
 }
+
+.resumen-linea strong {
+    color: var(--texto);
+}
+
+.resumen-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 1.2rem;
+}
+
+.resumen-total span {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.resumen-total strong {
+    color: var(--siena);
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   PAGO
+   ========================================================= */
+
+.pago-seccion {
+    padding: 5rem 0 7rem;
+
+    border-top: 1px solid var(--linea);
+}
+
+.pago-intro {
+    max-width: 650px;
+
+    margin-bottom: 2.5rem;
+}
+
+.pago-intro h2 {
+    margin-bottom: 0.8rem;
+
+    font-size: 2.3rem;
+}
+
+.formulario-pago {
+    width: min(750px, 100%);
+
+    padding: 2.5rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linea);
+
+    box-shadow:
+        12px 12px 0 rgba(160, 82, 45, 0.08);
+}
+
+.pago-dos-columnas {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
+}
+
+.btn-pagar {
+    width: 100%;
+
+    margin-top: 0.7rem;
+
+    padding: 1rem 1.5rem;
+
+    background: var(--siena);
+
+    border: 1px solid var(--siena);
+
+    color: var(--alabastro);
+
+    cursor: pointer;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.2s ease,
+        background 0.25s ease;
+}
+
+.btn-pagar:hover {
+    transform: translateY(-2px);
+
+    background: var(--madera);
+
+    border-color: var(--madera);
+}
+
+.pago-demo {
+    margin-top: 1rem;
+
+    text-align: center;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   COMPRA EXITOSA
+   ========================================================= */
+
+.compra-exitosa {
+    display: none;
+
+    width: min(700px, 100%);
+
+    padding: 4rem 2rem;
+
+    background: var(--papel);
+
+    border: 1px solid var(--linea);
+
+    text-align: center;
+}
+
+.check-compra {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 1.5rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--salvia);
+
+    color: white;
+
+    font-size: 2rem;
+}
+
+.compra-exitosa h2 {
+    margin-bottom: 0.8rem;
+
+    color: var(--madera);
+
+    font-size: 2rem;
+}
+
+.compra-exitosa p {
+    max-width: 500px;
+
+    margin: 0 auto 1.5rem;
+}
+
+.compra-exitosa a {
+    display: inline-block;
+
+    padding: 0.9rem 1.5rem;
+
+    background: var(--siena);
+
+    color: var(--alabastro);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CONTADOR CARRITO
+   ========================================================= */
+
+#carrito-contador {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20px;
+    height: 20px;
+
+    margin-left: 4px;
+
+    padding: 0 5px;
+
+    background: var(--dorado);
+
+    border-radius: 50%;
+
+    color: var(--madera);
+
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE CARRITO
+   ========================================================= */
 
 @media (max-width: 700px) {
-  .productos-grid {
-    grid-template-columns: 1fr;
-  }
-}}
+
+    .item-carrito {
+        grid-template-columns: 90px 1fr;
+
+        gap: 1rem;
+    }
+
+    .item-carrito img {
+        width: 90px;
+        height: 80px;
+    }
+
+    .item-carrito-final {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .pago-dos-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-pago {
+        padding: 1.5rem;
+    }
+
+}
