@@ -1,75 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta
-      name="description"
-      content="Mueblería Hermanos Jota: 30 años de tradición en muebles de calidad. Descubrí nuestros productos destacados."
-    />
+        name="description"
+        content="Mueblería Hermanos Jota: muebles de calidad, diseño atemporal y oficio artesanal."
+    >
+
     <title>Mueblería Hermanos Jota | Inicio</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
-  <body>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
     <header>
-      <div class="header-inner">
-        <a class="logo" href="#inicio">
-    <img src="img/logo.svg" alt="Mueblería Hermanos Jota">
-</a>
-        <nav aria-label="Navegación principal">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-</nav>
-      </div>
+        <div class="header-inner">
+
+            <a class="logo" href="index.html">
+                <img
+                    src="img/logo.svg"
+                    alt="Mueblería Hermanos Jota"
+                >
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+
+                    <li>
+                        <a href="productos.html">Productos</a>
+                    </li>
+
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
+
+    <!-- CONTENIDO PRINCIPAL -->
+
     <main id="inicio">
-      <section id="nosotros" aria-labelledby="titulo-principal">
 
-    <div class="nosotros-texto">
-        <h1 id="titulo-principal">Treinta años de oficio, una misma madera</h1>
+        <!-- PRESENTACIÓN -->
 
-        <p>
-            En Mueblería Hermanos Jota llevamos <strong>30 años</strong> diseñando
-            y fabricando muebles que acompañan hogares de generación en generación.
-            Nuestra tradición se sostiene en el trabajo artesanal, la selección
-            cuidadosa de maderas nobles y el respeto por cada detalle.
-            Lo que empezó como un taller familiar hoy es un legado: piezas duraderas,
-            honestas y hechas para vivirlas.
-        </p>
-    </div>
+        <section id="nosotros" aria-labelledby="titulo-principal">
 
-    <div class="nosotros-imagen">
-        <img src="img/Living.png" alt="Ambiente de interior con muebles de madera">
-    </div>
+            <div class="nosotros-texto">
 
-</section>
+                <h1 id="titulo-principal">
+                    Treinta años de oficio, una misma madera
+                </h1>
 
-      <section id="productos" aria-labelledby="titulo-productos">
-        <h2 id="titulo-productos">Productos destacados</h2>
-        <p class="seccion-intro">
-          Una selección de piezas que representan nuestro taller: forma, función
-          y madera bien trabajada.
-        </p>
+                <p>
+                    En Mueblería Hermanos Jota llevamos
+                    <strong>30 años</strong>
+                    diseñando y fabricando muebles que acompañan
+                    hogares de generación en generación.
 
-        <div class="productos-grid" id="productos-container">
-        </div>
+                    Nuestra tradición se sostiene en el trabajo
+                    artesanal, la selección cuidadosa de maderas
+                    nobles y el respeto por cada detalle.
 
-      </section>
+                    Lo que empezó como un taller familiar hoy es
+                    un legado: piezas duraderas, honestas y hechas
+                    para vivirlas.
+                </p>
+
+            </div>
+
+
+            <div class="nosotros-imagen">
+
+                <img
+                    src="img/Living.png"
+                    alt="Ambiente de interior con muebles de madera"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTOS DESTACADOS -->
+
+        <section
+            id="productos"
+            aria-labelledby="titulo-productos"
+        >
+
+            <h2 id="titulo-productos">
+                Productos destacados
+            </h2>
+
+            <p class="seccion-intro">
+                Una selección de piezas que representan nuestro
+                taller: forma, función y madera bien trabajada.
+            </p>
+
+
+            <!-- JavaScript va a cargar solamente 3 productos acá -->
+
+            <div
+                class="productos-grid"
+                id="destacados-container"
+            >
+            </div>
+
+
+            <!-- Botón para ver el catálogo completo -->
+
+            <div class="ver-catalogo">
+
+                <a href="productos.html">
+                    Ver todos los productos
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer id="contacto">
-      <p>
-        <small>
-          © 2026 Mueblería Hermanos Jota · Taller familiar desde 1996 ·
-          Buenos Aires
-        </small>
-      </p>
+
+        <p>
+            <small>
+                © 2026 Mueblería Hermanos Jota ·
+                Taller familiar desde 1996 ·
+                Buenos Aires
+            </small>
+        </p>
+
     </footer>
+
+
     <script src="../js/app.js"></script>
-  </body>
+
+</body>
+
 </html>
