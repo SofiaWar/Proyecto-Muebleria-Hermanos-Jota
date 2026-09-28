@@ -13,8 +13,7 @@ Este proyecto fue desarrollado de manera colaborativa por el **Grupo 9**:
 1. **Ángela Lucero Álvarez**
 2. **Ezequiel Gonzalez**
 3. **Lautaro Leal Del Prete**
-4. **Matias Edgardo Tula Sarquis**
-5. **Sofía Guerra**
+4. **Sofía Guerra**
 
 ## 🚀 Arquitectura y Tecnologías
 
