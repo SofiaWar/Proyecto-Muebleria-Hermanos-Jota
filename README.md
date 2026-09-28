@@ -6,7 +6,7 @@
 
 **Mueblería Hermanos Jota** es la fachada completa y experiencia interactiva del cliente para un e-commerce ficticio. En esta etapa, el proyecto evolucionó de una arquitectura puramente frontend a una verdadera aplicación cliente-servidor, dejando de usar datos locales estáticos para consumir su propia API REST.
 
-## 👥 Equipo de Trabajo (Grupo 9)
+## 👥 Equipo de Trabajo (Grupo H)
 
 Este proyecto fue desarrollado de manera colaborativa por el **Grupo 9**:
 
