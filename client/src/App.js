@@ -1,0 +1,73 @@
+import React, { useState } from 'react';
+import './css/styles.css'; 
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import ContactForm from './components/ContactForm';
+import ProductDetail from './components/ProductDetail';
+import Nosotros from './components/Nosotros';
+import Footer from './components/Footer';
+
+function App() {
+  const [carrito, setCarrito] = useState([]); 
+  const [vista, setVista] = useState('catalogo'); 
+  const [productoSeleccionado, setProductoSeleccionado] = useState(null); 
+
+  const agregarAlCarrito = (producto) => {
+    setCarrito([...carrito, producto]);
+  };
+
+  const verDetalle = (producto) => {
+    setProductoSeleccionado(producto);
+    setVista('detalle');
+  };
+
+  return (
+    <div className="App">
+      <Navbar cantidadCarrito={carrito.length} setVista={setVista} />
+      
+      {/* Contenedor principal idéntico a index.html */}
+      <main id="inicio">
+        {vista === 'catalogo' && (
+          <>
+            <section id="nosotros" aria-labelledby="titulo-principal">
+              <div className="nosotros-texto">
+                <h1 id="titulo-principal">Treinta años de oficio, una misma madera</h1>
+                <p>En Mueblería Hermanos Jota llevamos <strong>30 años</strong> diseñando y fabricando muebles que acompañan hogares de generación en generación. Nuestra tradición se sostiene en el trabajo artesanal, la selección cuidadosa de maderas nobles y el respeto por cada detalle. Lo que empezó como un taller familiar hoy es un legado: piezas duraderas, honestas y hechas para vivirlas.</p>
+              </div>
+              <div className="nosotros-imagen">
+                <img src="/img/Living.png" alt="Ambiente de interior con muebles de madera" />
+              </div>
+            </section>
+
+            <section id="productos" aria-labelledby="titulo-productos">
+              <h2 id="titulo-productos">Productos destacados</h2>
+              <p className="seccion-intro">Una selección de piezas que representan nuestro taller: forma, función y madera bien trabajada.</p>
+              
+              <ProductList agregarAlCarrito={agregarAlCarrito} verDetalle={verDetalle} />
+              
+              <div className="ver-catalogo">
+                <a href="#productos" onClick={(e) => { e.preventDefault(); }}>Ver todos los productos</a>
+              </div>
+            </section>
+          </>
+        )}
+
+        {vista === 'nosotros' && <Nosotros />}
+        
+        {vista === 'contacto' && <ContactForm />}
+
+        {vista === 'detalle' && productoSeleccionado && (
+          <ProductDetail 
+            producto={productoSeleccionado} 
+            volver={() => setVista('catalogo')} 
+            agregarAlCarrito={agregarAlCarrito}
+          />
+        )}
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
