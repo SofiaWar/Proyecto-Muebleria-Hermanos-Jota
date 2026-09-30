@@ -5,6 +5,7 @@ import ProductList from './components/ProductList';
 import ContactForm from './components/ContactForm';
 import ProductDetail from './components/ProductDetail';
 import Nosotros from './components/Nosotros';
+import Carrito from './components/Carrito';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,9 +14,34 @@ function App() {
   const [productoSeleccionado, setProductoSeleccionado] = useState(null); 
   const [vistaOrigen, setVistaOrigen] = useState('catalogo'); // vista desde la que se abrió el detalle
 
+  // Cada ítem del carrito es un producto con su `cantidad`: si ya está, se suma una unidad
   const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
+    setCarrito((prev) => {
+      const existente = prev.find((item) => item.id === producto.id);
+      if (existente) {
+        return prev.map((item) =>
+          item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
+        );
+      }
+      return [...prev, { ...producto, cantidad: 1 }];
+    });
   };
+
+  // delta = +1 o -1. Si la cantidad llega a 0, el producto sale del carrito
+  const cambiarCantidad = (id, delta) => {
+    setCarrito((prev) =>
+      prev
+        .map((item) => (item.id === id ? { ...item, cantidad: item.cantidad + delta } : item))
+        .filter((item) => item.cantidad > 0)
+    );
+  };
+
+  const eliminarDelCarrito = (id) => {
+    setCarrito((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  // El contador del Navbar suma unidades (no cantidad de filas)
+  const cantidadCarrito = carrito.reduce((total, item) => total + item.cantidad, 0);
 
   // Cambia de vista y vuelve al inicio de la página. No hay React Router: cambiar
   // de vista solo reemplaza el contenido de <main>, y el navegador conserva el
@@ -33,7 +59,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar cantidadCarrito={carrito.length} navegar={navegar} />
+      <Navbar cantidadCarrito={cantidadCarrito} navegar={navegar} />
       
       {/* Contenedor principal idéntico a index.html */}
       <main id="inicio">
@@ -83,6 +109,15 @@ function App() {
         {vista === 'nosotros' && <Nosotros />}
         
         {vista === 'contacto' && <ContactForm />}
+
+        {vista === 'carrito' && (
+          <Carrito
+            carrito={carrito}
+            cambiarCantidad={cambiarCantidad}
+            eliminarDelCarrito={eliminarDelCarrito}
+            irAProductos={() => navegar('productos')}
+          />
+        )}
 
         {vista === 'detalle' && productoSeleccionado && (
           <ProductDetail 
