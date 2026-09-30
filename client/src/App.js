@@ -16,14 +16,22 @@ function App() {
     setCarrito([...carrito, producto]);
   };
 
+  // Cambia de vista y vuelve al inicio de la página. No hay React Router: cambiar
+  // de vista solo reemplaza el contenido de <main>, y el navegador conserva el
+  // scroll. 'instant' evita la animación de scroll-behavior: smooth (base.css).
+  const navegar = (nuevaVista) => {
+    setVista(nuevaVista);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   const verDetalle = (producto) => {
     setProductoSeleccionado(producto);
-    setVista('detalle');
+    navegar('detalle');
   };
 
   return (
     <div className="App">
-      <Navbar cantidadCarrito={carrito.length} setVista={setVista} />
+      <Navbar cantidadCarrito={carrito.length} navegar={navegar} />
       
       {/* Contenedor principal idéntico a index.html */}
       <main id="inicio">
@@ -59,7 +67,7 @@ function App() {
         {vista === 'detalle' && productoSeleccionado && (
           <ProductDetail 
             producto={productoSeleccionado} 
-            volver={() => setVista('catalogo')} 
+            volver={() => navegar('catalogo')} 
             agregarAlCarrito={agregarAlCarrito}
           />
         )}
