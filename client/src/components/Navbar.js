@@ -13,7 +13,7 @@ function Navbar({ cantidadCarrito, navegar }) {
           <ul>
             <li><a href="#inicio" onClick={(e) => { e.preventDefault(); navegar('catalogo'); }}>Inicio</a></li>
             <li><a href="#nosotros" onClick={(e) => { e.preventDefault(); navegar('nosotros'); }}>Nosotros</a></li>
-            <li><a href="#productos" onClick={(e) => { e.preventDefault(); navegar('catalogo'); }}>Productos</a></li>
+            <li><a href="#productos" onClick={(e) => { e.preventDefault(); navegar('productos'); }}>Productos</a></li>
             <li><a href="#contacto" onClick={(e) => { e.preventDefault(); navegar('contacto'); }}>Contacto</a></li>
             {/* Ítem del carrito dinámico */}
             <li><a href="#carrito" onClick={(e) => e.preventDefault()} style={{ color: 'var(--dorado)' }}>Carrito ({cantidadCarrito})</a></li>

@@ -11,6 +11,7 @@ function App() {
   const [carrito, setCarrito] = useState([]); 
   const [vista, setVista] = useState('catalogo'); 
   const [productoSeleccionado, setProductoSeleccionado] = useState(null); 
+  const [vistaOrigen, setVistaOrigen] = useState('catalogo'); // vista desde la que se abrió el detalle
 
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, producto]);
@@ -25,6 +26,7 @@ function App() {
   };
 
   const verDetalle = (producto) => {
+    setVistaOrigen(vista);
     setProductoSeleccionado(producto);
     navegar('detalle');
   };
@@ -54,10 +56,28 @@ function App() {
               <ProductList soloDestacados agregarAlCarrito={agregarAlCarrito} verDetalle={verDetalle} />
               
               <div className="ver-catalogo">
-                <a href="#productos" onClick={(e) => { e.preventDefault(); }}>Ver todos los productos</a>
+                <a href="#productos" onClick={(e) => { e.preventDefault(); navegar('productos'); }}>Ver todos los productos</a>
               </div>
             </section>
           </>
+        )}
+
+        {vista === 'productos' && (
+          <div id="productos-main">
+            <section className="catalogo-hero">
+              <p className="etiqueta">COLECCIÓN</p>
+              <h1>Nuestros productos</h1>
+              <p>Piezas pensadas para acompañar la vida cotidiana, combinando oficio, materiales nobles y diseño atemporal.</p>
+            </section>
+
+            <section className="catalogo">
+              <div className="catalogo-titulo">
+                <h2>Catálogo</h2>
+                <p>Conocé todas nuestras piezas.</p>
+              </div>
+              <ProductList agregarAlCarrito={agregarAlCarrito} verDetalle={verDetalle} />
+            </section>
+          </div>
         )}
 
         {vista === 'nosotros' && <Nosotros />}
@@ -67,7 +87,7 @@ function App() {
         {vista === 'detalle' && productoSeleccionado && (
           <ProductDetail 
             producto={productoSeleccionado} 
-            volver={() => navegar('catalogo')} 
+            volver={() => navegar(vistaOrigen)} 
             agregarAlCarrito={agregarAlCarrito}
           />
         )}
