@@ -93,7 +93,7 @@ function App() {
         )}
       </main>
 
-      <Footer />
+      <Footer navegar={navegar} />
     </div>
   );
 }

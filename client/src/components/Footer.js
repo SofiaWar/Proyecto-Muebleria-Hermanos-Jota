@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer() {
+function Footer({ navegar }) {
   return (
     <footer id="contacto">
       <div className="footer-inner">
@@ -11,9 +11,9 @@ function Footer() {
         <div className="footer-col">
           <h3>Enlaces</h3>
           <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
+            <li><a href="#inicio" onClick={(e) => { e.preventDefault(); navegar('catalogo'); }}>Inicio</a></li>
+            <li><a href="#nosotros" onClick={(e) => { e.preventDefault(); navegar('nosotros'); }}>Nosotros</a></li>
+            <li><a href="#productos" onClick={(e) => { e.preventDefault(); navegar('productos'); }}>Productos</a></li>
           </ul>
         </div>
         <div className="footer-col">
