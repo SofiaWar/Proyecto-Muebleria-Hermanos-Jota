@@ -11,8 +11,8 @@ function Nosotros() {
           <p>Nuestra propuesta encuentra un punto de encuentro entre la herencia de la artesanía y una mirada contemporánea, donde cada pieza busca honrar el pasado mientras abraza el futuro.</p>
         </div>
         <div className="nosotros-imagen">
-          {/* Asegurate de tener una foto del taller en public/img */}
-          <img src="/img/taller.jpg" alt="Taller Hermanos Jota" />
+          {/* Imagen ubicada en client/public/img/fabrica.jpg */}
+          <img src="/img/fabrica.jpg" alt="Taller Hermanos Jota" />
         </div>
       </section>
 
