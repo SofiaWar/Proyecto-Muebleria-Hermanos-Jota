@@ -43,7 +43,7 @@ function App() {
               <h2 id="titulo-productos">Productos destacados</h2>
               <p className="seccion-intro">Una selección de piezas que representan nuestro taller: forma, función y madera bien trabajada.</p>
               
-              <ProductList agregarAlCarrito={agregarAlCarrito} verDetalle={verDetalle} />
+              <ProductList soloDestacados agregarAlCarrito={agregarAlCarrito} verDetalle={verDetalle} />
               
               <div className="ver-catalogo">
                 <a href="#productos" onClick={(e) => { e.preventDefault(); }}>Ver todos los productos</a>
