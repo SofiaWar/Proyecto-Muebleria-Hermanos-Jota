@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 
-function ProductList({ agregarAlCarrito, verDetalle }) {
+function ProductList({ agregarAlCarrito, verDetalle, soloDestacados = false }) {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -27,9 +27,14 @@ function ProductList({ agregarAlCarrito, verDetalle }) {
   if (cargando) return <p>Cargando catálogo...</p>;
   if (error) return <p>Ups! Hubo un problema: {error}</p>;
 
+  // Si se pide, mostramos solo los productos marcados con destacado: true en los datos
+  const productosAMostrar = soloDestacados
+    ? productos.filter(producto => producto.destacado)
+    : productos;
+
 return (
     <div className="productos-grid" id="destacados-container">
-      {productos.map(producto => (
+      {productosAMostrar.map(producto => (
         <ProductCard key={producto.id} producto={producto} agregarAlCarrito={agregarAlCarrito} verDetalle={verDetalle} />
       ))}
     </div>
